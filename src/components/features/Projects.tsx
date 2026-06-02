@@ -1,7 +1,7 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import { ExternalLink, Layers, MessageSquare, Video, FileText, CheckCircle2, ArrowUpRight } from 'lucide-react';
 import { Card } from '@/components/ui/Card';
 import { Button } from '@/components/ui/Button';
@@ -51,34 +51,34 @@ const projects = [
 ];
 
 // ─── Animation variants ───────────────────────────────────────────────────────
-const containerVariants = {
+const containerVariants: Variants = {
   hidden: {},
   visible: {
     transition: { staggerChildren: 0.15, delayChildren: 0.1 },
   },
 };
 
-const cardVariants = {
+const cardVariants: Variants = {
   hidden: { opacity: 0, y: 40, scale: 0.97 },
   visible: {
     opacity: 1,
     y: 0,
     scale: 1,
-    transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] },
+    transition: { duration: 0.6, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] },
   },
 };
 
-const mockupVariants = {
+const mockupVariants: Variants = {
   hidden: { opacity: 0, scale: 0.92, filter: 'blur(6px)' },
   visible: {
     opacity: 1,
     scale: 1,
     filter: 'blur(0px)',
-    transition: { duration: 0.55, delay: 0.15, ease: [0.25, 0.1, 0.25, 1] },
+    transition: { duration: 0.55, delay: 0.15, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] },
   },
 };
 
-const badgeVariants = {
+const badgeVariants: Variants = {
   hidden: { opacity: 0, scale: 0.8 },
   visible: (i: number) => ({
     opacity: 1,
@@ -87,12 +87,12 @@ const badgeVariants = {
   }),
 };
 
-const actionsVariants = {
+const actionsVariants: Variants = {
   hidden: { opacity: 0, y: 10 },
   visible: {
     opacity: 1,
     y: 0,
-    transition: { duration: 0.4, delay: 0.45, ease: [0.25, 0.1, 0.25, 1] },
+    transition: { duration: 0.4, delay: 0.45, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] },
   },
 };
 

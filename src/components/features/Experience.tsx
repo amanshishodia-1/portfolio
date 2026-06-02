@@ -1,18 +1,18 @@
 'use client';
 
 import React from 'react';
-import { motion } from 'framer-motion';
+import { motion, type Variants } from 'framer-motion';
 import { Calendar, Briefcase, Check } from 'lucide-react';
 import { Card } from '@/components/ui/Card';
 import { Text } from '@/components/ui/Text';
 
 // Reusable fade-up variant
-const fadeUp = {
+const fadeUp: Variants = {
   hidden: { opacity: 0, y: 24 },
   visible: (i = 0) => ({
     opacity: 1,
     y: 0,
-    transition: { duration: 0.55, delay: i * 0.1, ease: [0.25, 0.1, 0.25, 1] },
+    transition: { duration: 0.55, delay: i * 0.1, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] },
   }),
 };
 
@@ -78,7 +78,7 @@ export function Experience() {
             initial={{ scaleY: 0 }}
             whileInView={{ scaleY: 1 }}
             viewport={{ once: true, margin: '-60px' }}
-            transition={{ duration: 1.1, ease: [0.25, 0.1, 0.25, 1] }}
+            transition={{ duration: 1.1, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] }}
             style={{ height: '100%' }}
           />
 
@@ -132,7 +132,7 @@ export function Experience() {
                   initial={{ opacity: 0, x: 20 }}
                   whileInView={{ opacity: 1, x: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.5, delay: 0.25, ease: [0.25, 0.1, 0.25, 1] }}
+                  transition={{ duration: 0.5, delay: 0.25, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] }}
                   className="text-muted-foreground bg-card border-border flex items-center space-x-1.5 rounded-full border px-3 py-1 font-mono text-xs"
                 >
                   <Calendar className="h-3.5 w-3.5" />
@@ -179,7 +179,7 @@ export function Experience() {
                           initial={{ opacity: 0, x: -12 }}
                           whileInView={{ opacity: 1, x: 0 }}
                           viewport={{ once: true }}
-                          transition={{ duration: 0.4, delay: 0.35 + i * 0.12, ease: [0.25, 0.1, 0.25, 1] }}
+                          transition={{ duration: 0.4, delay: 0.35 + i * 0.12, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] }}
                         >
                           <Check className="text-accent mt-0.5 mr-2.5 h-4 w-4 flex-shrink-0" />
                           <span>{text}</span>
@@ -224,7 +224,7 @@ export function Experience() {
                           initial={{ opacity: 0, x: -12 }}
                           whileInView={{ opacity: 1, x: 0 }}
                           viewport={{ once: true }}
-                          transition={{ duration: 0.4, delay: 0.45 + i * 0.12, ease: [0.25, 0.1, 0.25, 1] }}
+                          transition={{ duration: 0.4, delay: 0.45 + i * 0.12, ease: [0.25, 0.1, 0.25, 1] as [number, number, number, number] }}
                         >
                           <Check className="text-accent mt-0.5 mr-2.5 h-4 w-4 flex-shrink-0" />
                           <span>{text}</span>
