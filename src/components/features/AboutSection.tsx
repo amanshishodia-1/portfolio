@@ -348,7 +348,7 @@ export function AboutSection() {
 
               <div className="space-y-3 text-sm leading-relaxed text-zinc-400 pl-1">
                 <p>
-                  I'm a{' '}
+                  I&apos;m a{' '}
                   <span className="font-medium text-zinc-200">Computer Science & Technology</span>{' '}
                   undergraduate at Maharaja Agrasen Institute of Technology, supplementing coursework
                   with deep practice in{' '}
