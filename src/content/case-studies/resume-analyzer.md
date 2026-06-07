@@ -4,7 +4,7 @@ category: "AI Tool"
 description: "A deep dive into building an automated resume scanner using PDF extraction vectors, TF-IDF keyword mapping algorithms, and PuterJS serverless scripts."
 tech: ["React", "TypeScript", "PuterJS", "ATS Parsing", "AI Integration"]
 liveUrl: "https://resume-analyzer-one-beige.vercel.app/"
-githubUrl: "https://github.com/amanshishodia/resume-analyzer"
+githubUrl: "https://github.com/amanshishodia-1/resume-analyzer"
 slug: "resume-analyzer"
 ---
 

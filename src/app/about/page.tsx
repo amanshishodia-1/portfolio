@@ -116,7 +116,7 @@ export default function AboutPage() {
               </Button>
               <Button
                 variant="secondary"
-                href="https://github.com/amanshishodia"
+                href="https://github.com/amanshishodia-1"
                 leftIcon={
                   <svg
                     viewBox="0 0 24 24"

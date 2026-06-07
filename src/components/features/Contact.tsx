@@ -164,7 +164,7 @@ export function Contact() {
 
             {/* GitHub Card */}
             <a
-              href="https://github.com/amanshishodia"
+              href="https://github.com/amanshishodia-1"
               target="_blank"
               rel="noopener noreferrer"
               className="gsap-reveal-item block group h-full"
@@ -182,7 +182,7 @@ export function Contact() {
                   </div>
                   <div className="space-y-1">
                     <h4 className="text-foreground text-sm font-semibold tracking-tight">GitHub</h4>
-                    <p className="text-zinc-500 font-mono text-[10px]">github.com/amanshishodia</p>
+                    <p className="text-zinc-500 font-mono text-[10px]">github.com/amanshishodia-1</p>
                   </div>
                   <p className="text-muted-foreground text-xs leading-relaxed font-sans">
                     Browse repository files, review commit logs, and inspect source files.

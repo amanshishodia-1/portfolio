@@ -124,3 +124,106 @@
 .animate-float-slower {
   animation: float 25s infinite ease-in-out;
 }
+
+/* ── Typography Scale ──────────────────────────────────────────────── */
+/* Hero heading: 72px–96px on large screens, tight tracking, weight 800 */
+.text-hero {
+  font-size: clamp(3.5rem, 8vw, 6rem);
+  font-weight: 800;
+  letter-spacing: -0.02em;
+  line-height: 1;
+}
+
+/* Section headings: 40px–48px */
+.text-section-heading {
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  line-height: 1.1;
+}
+
+/* Body: 16px–18px, relaxed line height */
+.text-body {
+  font-size: clamp(1rem, 1.5vw, 1.125rem);
+  line-height: 1.6;
+  font-weight: 400;
+}
+
+/* Labels / tags: 12px uppercase, wide tracking */
+.text-label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+/* ── Section Spacing ───────────────────────────────────────────────── */
+/* Minimum 120px (7.5rem) between sections — scoped to named page sections only */
+section[id] {
+  padding-top: 7.5rem;
+  padding-bottom: 7.5rem;
+}
+
+/* ── Card Styles ───────────────────────────────────────────────────── */
+/* Consistent card: 24px padding, 12px radius, subtle border */
+.premium-card {
+  padding: 1.5rem;
+  border-radius: 0.75rem;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: #111111;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.premium-card:hover {
+  border-color: var(--accent);
+  box-shadow: 0 0 0 1px var(--accent);
+}
+
+/* ── Skill/Tech Pill Tags ──────────────────────────────────────────── */
+.skill-tag {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.375rem 0.75rem;
+  font-size: 0.8125rem;
+  font-family: var(--font-geist-mono), monospace;
+  border-radius: 9999px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.10);
+  color: #a1a1aa;
+  transition: background 0.15s ease, color 0.15s ease;
+  cursor: default;
+}
+
+.skill-tag:hover {
+  background: rgba(59, 130, 246, 0.15);
+  color: #ffffff;
+}
+
+/* ── Hero Radial Glow ──────────────────────────────────────────────── */
+.hero-radial-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  background: radial-gradient(
+    ellipse 60% 50% at 50% 40%,
+    rgba(59, 130, 246, 0.12) 0%,
+    transparent 70%
+  );
+}
+
+/* ── Button Animations ─────────────────────────────────────────────── */
+/* Primary CTA: subtle scale on hover */
+.btn-primary-cta {
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-primary-cta:hover {
+  transform: scale(1.02);
+}
+
+/* ── Elevated Card Surface ─────────────────────────────────────────── */
+.card-elevated {
+  background: #1a1a1a;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+

@@ -74,12 +74,12 @@ const achievementsList: AchievementCard[] = [
   {
     title: 'LeetCode Knight',
     subtitle: 'Competitive DSA Solvers',
-    metric: 'Rating 1850+',
+    metric: 'Rating 1900+',
     badge: <LeetCodeKnightIcon />,
-    detail: 'Secured Knight tier (Rating 1850+, Top 3.5% globally) in biweekly speed contests. Optimization focuses include modular arithmetic, sliding-window array buffers, and memoized DP recursion.',
+    detail: 'Secured Knight tier (Rating 1900+, Top 3.5% globally) in biweekly speed contests. Optimization focuses include modular arithmetic, sliding-window array buffers, and memoized DP recursion.',
     colorClass: 'text-amber-500 border-amber-500/20 bg-amber-500/5',
-    progressPercent: 42, // (1850-1600)/(2190-1600) * 100 = 42% toward Guardian (2190)
-    progressText: '42% toward Guardian (Rating 2190+)',
+    progressPercent: 50, // (1900-1600)/(2190-1600) * 100 ≈ 50% toward Guardian (2190)
+    progressText: '50% toward Guardian (Rating 2190+)',
     platformStats: [
       { label: 'Global Rank', val: 'Top 3.5%' },
       { label: 'Contests Solved', val: '40+' },
@@ -104,12 +104,12 @@ const achievementsList: AchievementCard[] = [
   {
     title: 'CodeChef 2 Star',
     subtitle: 'Monthly Division Contests',
-    metric: 'Rating 1550+',
+    metric: 'Rating 1564+',
     badge: <CodeChefIcon />,
     detail: 'Consistently placing in Division 3 challenges. Solved complex modular arithmetic and number theory arrays with quick implementation and edge-case validation.',
     colorClass: 'text-amber-700 border-amber-700/20 bg-amber-700/5',
-    progressPercent: 75, // (1550-1400)/(1600-1400) * 100 = 75% toward 3 Star (1600)
-    progressText: '75% toward 3-Star Chef (Rating 1600+)',
+    progressPercent: 82, // (1564-1400)/(1600-1400) * 100 = 82% toward 3 Star (1600)
+    progressText: '82% toward 3-Star Chef (Rating 1600+)',
     platformStats: [
       { label: 'Division Group', val: 'Division 3' },
       { label: 'Peak Rating', val: '1564' },
@@ -188,7 +188,7 @@ export function Achievements() {
             <div className="flex flex-col items-center space-y-2">
               <Trophy className="h-5 w-5 text-amber-500" />
               <Text size="3xl" family="mono" weight="extrabold" className="text-foreground mt-2">
-                <AnimatedCounter value={1850} suffix="+" />
+                <AnimatedCounter value={1900} suffix="+" />
               </Text>
               <Text color="muted" size="xs" family="mono">leetcode_rating</Text>
             </div>
@@ -199,7 +199,7 @@ export function Achievements() {
             <div className="flex flex-col items-center space-y-2">
               <Target className="h-5 w-5 text-emerald-500" />
               <Text size="3xl" family="mono" weight="extrabold" className="text-foreground mt-2">
-                <AnimatedCounter value={1200} suffix="+" />
+                <AnimatedCounter value={1210} suffix="+" />
               </Text>
               <Text color="muted" size="xs" family="mono">codeforces_rating</Text>
             </div>
@@ -210,7 +210,7 @@ export function Achievements() {
             <div className="flex flex-col items-center space-y-2">
               <Flame className="h-5 w-5 text-amber-600" />
               <Text size="3xl" family="mono" weight="extrabold" className="text-foreground mt-2">
-                <AnimatedCounter value={1550} suffix="+" />
+                <AnimatedCounter value={1564} suffix="+" />
               </Text>
               <Text color="muted" size="xs" family="mono">codechef_rating</Text>
             </div>

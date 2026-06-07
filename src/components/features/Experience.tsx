@@ -17,15 +17,15 @@ const fadeUp: Variants = {
 };
 
 const bullets1 = [
-  'Redesigned data caching layers to improve page load efficiency by 35%.',
-  'Developed secure JSON Web Token (JWT) user authentication protocols.',
-  'Implemented advanced client-side query filters to browse content topics.',
+  'Rebuilt the data caching layer for a news aggregator, reducing average page load time by 35%.',
+  'Implemented JWT-based user authentication from scratch, covering login, token refresh, and protected routes.',
+  'Added client-side topic filters that let users browse content by category without additional API calls.',
 ];
 
 const bullets2 = [
-  'Constructed interactive map overlays for geospatial travel destination discovery.',
-  'Integrated Socket.io web-socket gateways to support real-time chat between travelers.',
-  'Refactored Express.js schema resolvers, achieving 40% optimization of backend API endpoints.',
+  'Built interactive map overlays for a travel app using geospatial APIs to show destination discovery.',
+  'Integrated Socket.io to enable real-time chat between travelers within the app.',
+  'Refactored Express.js API endpoints, reducing average response time by 40%.',
 ];
 
 export function Experience() {

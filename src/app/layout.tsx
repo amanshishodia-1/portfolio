@@ -16,46 +16,54 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL(
+    process.env.VERCEL_URL
+      ? `https://${process.env.VERCEL_URL}`
+      : 'http://localhost:3000'
+  ),
   title: {
     default: 'Aman Shishodia - Portfolio',
     template: '%s | Aman Shishodia',
   },
   description:
-    'A production-grade developer portfolio built with Next.js 15, Tailwind CSS, and Framer Motion.',
+    'Full stack developer building React interfaces, Node.js backends, and real-time systems. Knight-ranked on LeetCode (1900+, Top 3.5% globally).',
   keywords: [
     'Aman Shishodia',
     'Portfolio',
+    'Full Stack Developer',
     'Software Engineer',
     'Next.js',
     'React',
     'TypeScript',
-    'Tailwind CSS',
+    'Node.js',
+    'LeetCode Knight',
+    'Competitive Programming',
   ],
   authors: [{ name: 'Aman Shishodia' }],
   creator: 'Aman Shishodia',
   openGraph: {
     type: 'website',
     locale: 'en_US',
-    url: 'https://amanshishodia.com',
+    url: 'https://portfolio-amanshishodia.vercel.app',
     siteName: 'Aman Shishodia',
-    title: 'Aman Shishodia - Portfolio',
+    title: 'Aman Shishodia - Full Stack Developer Portfolio',
     description:
-      'A production-grade developer portfolio built with Next.js 15, Tailwind CSS, and Framer Motion.',
+      'Full stack developer building React interfaces, Node.js backends, and real-time systems. Knight-ranked on LeetCode (1900+, Top 3.5%).',
     images: [
       {
-        url: 'https://amanshishodia.com/og-image.png',
+        url: '/og-image.png',
         width: 1200,
         height: 630,
-        alt: 'Aman Shishodia - Portfolio',
+        alt: 'Aman Shishodia - Full Stack Developer Portfolio',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Aman Shishodia - Portfolio',
+    title: 'Aman Shishodia - Full Stack Developer Portfolio',
     description:
-      'A production-grade developer portfolio built with Next.js 15, Tailwind CSS, and Framer Motion.',
-    images: ['https://amanshishodia.com/og-image.png'],
+      'Full stack developer building React interfaces, Node.js backends, and real-time systems. Knight-ranked on LeetCode (1900+, Top 3.5%).',
+    images: ['/og-image.png'],
     creator: '@aman_shishodia',
   },
   robots: {
@@ -92,10 +100,11 @@ export default function RootLayout({
     '@type': 'Person',
     name: 'Aman Shishodia',
     jobTitle: 'Full Stack Developer',
-    url: 'https://amanshishodia.com',
+    url: 'https://portfolio-amanshishodia.vercel.app',
+    email: 'amanshishodia863@gmail.com',
     sameAs: [
-      'https://github.com/amanshishodia',
-      'https://linkedin.com',
+      'https://github.com/amanshishodia-1',
+      'https://www.linkedin.com/in/aman-shishodiaa/',
       'https://leetcode.com/u/0Aman5/',
       'https://www.codechef.com/users/crash_yarn_66',
       'https://codeforces.com/profile/2Aman9',

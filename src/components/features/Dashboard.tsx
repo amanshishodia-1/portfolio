@@ -18,14 +18,17 @@ export function AnimatedCounter({
 }) {
   const [count, setCount] = useState(0);
   const elementRef = useRef<HTMLSpanElement>(null);
-  const [hasAnimated, setHasAnimated] = useState(false);
+  // Use a ref instead of state so the flag doesn't trigger useEffect re-runs
+  // that would disconnect the observer and orphan the RAF loop.
+  const hasAnimatedRef = useRef(false);
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       (entries) => {
         const [entry] = entries;
-        if (entry.isIntersecting && !hasAnimated) {
-          setHasAnimated(true);
+        if (entry.isIntersecting && !hasAnimatedRef.current) {
+          hasAnimatedRef.current = true;
+          observer.disconnect(); // stop watching once triggered
           let startTime: number | null = null;
 
           function animate(timestamp: number) {
@@ -46,7 +49,9 @@ export function AnimatedCounter({
           requestAnimationFrame(animate);
         }
       },
-      { threshold: 0.1 },
+      // threshold: 0 fires even when a parent has opacity:0 (GSAP reveal)
+      // rootMargin gives a small buffer so the counter starts slightly before center
+      { threshold: 0, rootMargin: '0px 0px -5% 0px' },
     );
 
     if (elementRef.current) {
@@ -56,7 +61,9 @@ export function AnimatedCounter({
     return () => {
       observer.disconnect();
     };
-  }, [value, duration, hasAnimated]);
+  // Only re-run if value or duration changes (not on every render)
+  // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [value, duration]);
 
   return (
     <span ref={elementRef}>
@@ -379,7 +386,7 @@ export function Dashboard() {
                   technologies_pool
                 </Text>
                 <div className="text-foreground font-mono text-2xl font-bold tracking-tight">
-                  <AnimatedCounter value={10} suffix="+" />
+                  <AnimatedCounter value={16} suffix="+" />
                 </div>
               </div>
               <div 

@@ -13,10 +13,10 @@ const projects = [
     title: 'Trackly',
     category: 'Productivity SaaS',
     description:
-      'Designed a collaborative workspace featuring optimistic drag-and-drop Kanban states, JWT auth guards, and team workspaces with role-based permissions (RBAC) to handle active issue tracking.',
+      'A collaborative project management tool with drag-and-drop Kanban boards, JWT-based authentication, and role-based access control. Built with React, Node.js, MongoDB, and Express.',
     tech: ['React', 'Node.js', 'MongoDB', 'Express'],
     liveUrl: 'https://trackly-psi.vercel.app',
-    githubUrl: 'https://github.com/amanshishodia/trackly',
+    githubUrl: 'https://github.com/amanshishodia-1/trackly',
     mockup: <TracklyMockup />,
     slug: 'trackly',
     accentColor: 'rgba(59,130,246,0.15)',
@@ -26,10 +26,10 @@ const projects = [
     title: 'Streamify',
     category: 'Real-time Communication',
     description:
-      'Constructed a low-latency communication system integrating WebRTC peer feeds (Stream API) and Socket.io state reconciliations. Implemented optimistic updates for instant UI messaging feedback.',
+      'A real-time chat and video communication app using WebRTC for peer-to-peer video and Socket.io for instant messaging. Supports multiple users with optimistic UI updates for a fast, responsive feel.',
     tech: ['React', 'Node.js', 'Socket.io', 'Stream API'],
     liveUrl: 'https://streamify-uv86.onrender.com/',
-    githubUrl: 'https://github.com/amanshishodia/chat-video-app',
+    githubUrl: 'https://github.com/amanshishodia-1/chat-video-app',
     mockup: <ChatVideoMockup />,
     slug: 'chat-video',
     accentColor: 'rgba(139,92,246,0.15)',
@@ -39,10 +39,10 @@ const projects = [
     title: 'Resume Analyzer',
     category: 'AI Tool',
     description:
-      'Built an ATS profiling engine scanning PDF formats, parsing tokenized layout keyword weights, and utilizing PuterJS cloud nodes to calculate action metrics.',
+      'A tool that parses uploaded PDF resumes, scores them against ATS keyword criteria, and gives actionable feedback on formatting and content gaps. Built with React and TypeScript.',
     tech: ['React', 'TypeScript', 'PuterJS'],
     liveUrl: 'https://resume-analyzer-one-beige.vercel.app/',
-    githubUrl: 'https://github.com/amanshishodia/resume-analyzer',
+    githubUrl: 'https://github.com/amanshishodia-1/resume-analyzer',
     mockup: <ResumeMockup />,
     slug: 'resume-analyzer',
     accentColor: 'rgba(16,185,129,0.15)',
@@ -219,7 +219,7 @@ export function Projects() {
                           key={t}
                           custom={i}
                           variants={badgeVariants}
-                          className="border-border rounded border bg-[#161618] px-2 py-0.5 font-mono text-[10px] font-medium text-zinc-400"
+                          className="skill-tag"
                         >
                           {t}
                         </motion.span>

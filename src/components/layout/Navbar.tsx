@@ -39,7 +39,15 @@ export function Navbar() {
 
   return (
     <>
-      <header className="border-border bg-background/80 sticky top-0 z-40 w-full border-b backdrop-blur-md">
+      <header
+        className="sticky top-0 z-40 w-full"
+        style={{
+          backdropFilter: 'blur(12px)',
+          WebkitBackdropFilter: 'blur(12px)',
+          backgroundColor: 'rgba(10,10,10,0.8)',
+          borderBottom: '1px solid rgba(255,255,255,0.08)',
+        }}
+      >
         <Container className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-6">
             <Link href="/" className="flex items-center space-x-2">

@@ -173,11 +173,11 @@ export function CinematicHero() {
                 AMAN SHISHODIA
               </Text>
             </div>
-            <Text color="muted" size="lg" className="max-w-[40rem] font-sans leading-relaxed">
-              Specializing in Next.js core architectures, real-time node synchronization, and
-              contest-tested algorithmic optimization. Focused on low-latency systems and clean
-              interface state logic.
-            </Text>
+              <Text color="muted" size="lg" className="max-w-[40rem] font-sans leading-relaxed">
+                I build full stack web applications — from clean React interfaces to Node.js backends
+                and real-time systems. I write production-ready code and solve algorithmic problems
+                at a competitive level.
+              </Text>
             <div className="flex flex-wrap gap-4 pt-4">
               <Button
                 variant="accent"
@@ -232,6 +232,7 @@ export function CinematicHero() {
                   alt="Aman Shishodia — developer profile"
                   fill
                   className="object-cover object-top"
+                  style={{ filter: 'brightness(0.55)' }}
                   priority
                 />
               </div>
@@ -255,6 +256,8 @@ export function CinematicHero() {
       >
         {/* Background Grids */}
         <div className="absolute inset-0 z-0">
+          {/* Subtle centered radial glow — accent at ~12% opacity */}
+          <div className="hero-radial-glow" />
           <div className="absolute inset-0 bg-[linear-gradient(to_right,var(--border)_1px,transparent_1px),linear-gradient(to_bottom,var(--border)_1px,transparent_1px)] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_40%,#000_70%,transparent_100%)] bg-[size:4.5rem_4.5rem] opacity-30" />
           <div className="hero-bg-glow-1 pointer-events-none absolute top-1/4 left-1/4 h-[350px] w-[350px] rounded-full bg-blue-500/10 blur-[100px]" />
           <div className="hero-bg-glow-2 pointer-events-none absolute right-1/4 bottom-1/3 h-[400px] w-[400px] rounded-full bg-indigo-500/10 blur-[120px]" />
@@ -291,16 +294,16 @@ export function CinematicHero() {
                     >
                       FULL STACK DEVELOPER
                     </Text>
-                    <h1 className="bg-gradient-to-b from-white to-zinc-400 bg-clip-text font-sans text-4xl leading-none font-extrabold tracking-tight text-transparent sm:text-5xl lg:text-6xl">
+                    <h1 className="bg-gradient-to-b from-white to-zinc-400 bg-clip-text font-sans text-5xl leading-none font-extrabold tracking-[-0.02em] text-transparent sm:text-6xl lg:text-7xl xl:text-8xl">
                       AMAN SHISHODIA
                     </h1>
                   </div>
 
                   {/* Headline */}
                   <p className="text-muted-foreground max-w-[38rem] font-sans text-sm leading-relaxed sm:text-base lg:text-lg">
-                    Specializing in Next.js core architectures, real-time node synchronization, and
-                    contest-tested algorithmic optimization. Focused on low-latency systems and
-                    clean interface state logic.
+                    I build full stack web applications — from clean React interfaces to Node.js
+                    backends and real-time systems. I write production-ready code and solve
+                    algorithmic problems at a competitive level.
                   </p>
 
                   {/* Action buttons */}
@@ -535,6 +538,7 @@ export function CinematicHero() {
                       alt="Aman Shishodia — developer profile"
                       fill
                       className="object-cover object-top"
+                      style={{ filter: 'brightness(0.55)' }}
                       priority
                     />
                   </div>

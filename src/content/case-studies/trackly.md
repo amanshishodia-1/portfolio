@@ -4,7 +4,7 @@ category: "Productivity SaaS"
 description: "A deep dive into building a secure, real-time Kanban board with role-based access control, optimistic UI updates, and transaction-safe NoSQL schemas."
 tech: ["React", "Node.js", "MongoDB", "Express", "JWT", "REST API"]
 liveUrl: "https://trackly-psi.vercel.app"
-githubUrl: "https://github.com/amanshishodia/trackly"
+githubUrl: "https://github.com/amanshishodia-1/trackly"
 slug: "trackly"
 ---
 

@@ -4,7 +4,7 @@ category: "Real-time Communication"
 description: "How to engineer low-latency real-time video feeds and channels using WebRTC peer connections, Socket.io signaling gateways, and React state controls."
 tech: ["React", "Node.js", "Socket.io", "Stream API", "WebRTC", "Tailwind"]
 liveUrl: "https://streamify-uv86.onrender.com/"
-githubUrl: "https://github.com/amanshishodia/chat-video-app"
+githubUrl: "https://github.com/amanshishodia-1/chat-video-app"
 slug: "chat-video"
 ---
 
