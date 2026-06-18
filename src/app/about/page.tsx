@@ -100,7 +100,7 @@ export default function AboutPage() {
               I build web applications with strict attention to performance. My practice centers on writing clean typescript states, refactoring server routes to reduce DB load, and managing Socket connections for low-latency updates.
             </Text>
             <Text color="muted" className="leading-relaxed text-sm sm:text-base">
-              During my internship at **Cantilever**, I shipped backend and frontend features for a News Aggregator and TravelBuddy, direct impacts including reducing page load times by 35% and optimization of Express API controllers by 40%.
+              During my internship at **Cantilever**, I shipped backend and frontend features for a News Aggregator and TravelBuddy. Direct impacts included reducing page load times from 3.2s to 2.1s (~35%) using Redis caching, and optimizing Express API response times from 1.2s to 700ms (~40%) with index tuning.
             </Text>
             <Text color="muted" className="leading-relaxed text-sm sm:text-base">
               Additionally, I practice competitive coding. Reaching LeetCode **Knight** (top 3.5% globally) has trained me to quickly identify algorithmic optimizations (dynamic programming, sliding window indices, monotonic stacks) and maintain clean execution under constraints.
@@ -281,6 +281,39 @@ export default function AboutPage() {
                   </ul>
                 </Card>
               </div>
+
+              <div className="flex flex-wrap items-center justify-between gap-4 mt-12">
+                <div className="flex flex-wrap items-center gap-2">
+                  <Briefcase className="text-accent h-4.5 w-4.5" />
+                  <Text size="lg" weight="bold" className="text-foreground">
+                    Independent Software Developer
+                  </Text>
+                </div>
+                <div className="text-muted-foreground bg-card border-border flex items-center space-x-1.5 rounded-full border px-3 py-1 font-mono text-xs">
+                  <Calendar className="h-3.5 w-3.5" />
+                  <span>Sept 2025 &ndash; Present</span>
+                </div>
+              </div>
+
+              {/* Detail cards */}
+              <div className="grid gap-6 md:grid-cols-2 mt-4">
+                <Card className="bg-[#111111] p-5">
+                  <div className="border-border/40 flex items-center justify-between border-b pb-2 mb-3">
+                    <Text weight="bold" className="text-foreground text-sm sm:text-base">Full Stack Products</Text>
+                  </div>
+                  <ul className="space-y-2 text-xs sm:text-sm text-zinc-400">
+                    <li className="flex items-start">
+                      <Check className="text-accent mt-0.5 mr-2 h-3.5 w-3.5 flex-shrink-0" />
+                      <span>Architected and launched scalable full-stack applications like Trackly and Streamify.</span>
+                    </li>
+                    <li className="flex items-start">
+                      <Check className="text-accent mt-0.5 mr-2 h-3.5 w-3.5 flex-shrink-0" />
+                      <span>Integrated WebRTC, Socket.io, and secure JWT authentication systems.</span>
+                    </li>
+                  </ul>
+                </Card>
+              </div>
+
             </div>
           </div>
         </div>

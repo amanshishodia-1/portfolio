@@ -17,7 +17,7 @@ const fadeUp: Variants = {
 };
 
 const bullets1 = [
-  'Rebuilt the data caching layer for a news aggregator, reducing average page load time by 35%.',
+  'Rebuilt the data caching layer using Redis for a news aggregator, reducing average page load time from 3.2s to 2.1s (a ~35% improvement).',
   'Implemented JWT-based user authentication from scratch, covering login, token refresh, and protected routes.',
   'Added client-side topic filters that let users browse content by category without additional API calls.',
 ];
@@ -25,7 +25,7 @@ const bullets1 = [
 const bullets2 = [
   'Built interactive map overlays for a travel app using geospatial APIs to show destination discovery.',
   'Integrated Socket.io to enable real-time chat between travelers within the app.',
-  'Refactored Express.js API endpoints, reducing average response time by 40%.',
+  'Refactored Express.js API endpoints with optimized database queries, reducing average response time from 1.2s to 700ms (a ~40% improvement).',
 ];
 
 export function Experience() {
@@ -55,7 +55,7 @@ export function Experience() {
           whileInView={{ opacity: 1, filter: 'blur(0px)' }}
           viewport={{ once: true, margin: '-80px' }}
           transition={{ duration: 0.7 }}
-          className="mb-16 flex flex-col space-y-2"
+          className="mb-10 flex flex-col space-y-2 md:mb-16"
         >
           <Text family="mono" size="xs" color="accent" weight="bold" className="tracking-widest">
             EXPERIENCE

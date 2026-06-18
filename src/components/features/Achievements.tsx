@@ -159,13 +159,13 @@ export function Achievements() {
         {/* Section Heading */}
         <div className="mb-16 flex flex-col space-y-2">
           <Text family="mono" size="xs" color="accent" weight="bold" className="tracking-widest">
-            BENCHMARKS
+            ALGORITHMIC FOUNDATION
           </Text>
           <Text as="h2" size="3xl" weight="extrabold" className="tracking-tight">
-            Coding Achievements.
+            Problem Solving & Logic.
           </Text>
           <Text color="muted" size="base" className="max-w-[32rem]">
-            Competitive programming ratings, platform benchmarks, and algorithmic verification metrics.
+            A strong foundation in data structures and algorithmic complexity ensures the backend systems I build are optimized for scale and performance.
           </Text>
         </div>
 

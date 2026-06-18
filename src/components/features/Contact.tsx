@@ -93,7 +93,7 @@ export function Contact() {
               </Button>
               <Button
                 variant="secondary"
-                href="https://drive.google.com/file/d/1A1TOb4Pt56tx6bKtyMm64hagbvn9sAIq/view?usp=drive_link"
+                href="/resume.pdf"
                 leftIcon={<Download className="h-4 w-4" />}
                 className="w-full sm:w-auto"
               >
@@ -193,7 +193,7 @@ export function Contact() {
 
             {/* Resume Download Card */}
             <a
-              href="https://drive.google.com/file/d/1A1TOb4Pt56tx6bKtyMm64hagbvn9sAIq/view?usp=drive_link"
+              href="/resume.pdf"
               target="_blank"
               rel="noopener noreferrer"
               className="gsap-reveal-item block group h-full"

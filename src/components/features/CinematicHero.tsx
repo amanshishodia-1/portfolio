@@ -51,35 +51,21 @@ export function CinematicHero() {
         gsap.set('.orb-ring-vertical', { rotationY: 75, rotationZ: 0 });
         gsap.set('.orb-svg-ring', { rotation: 0 });
 
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: scrollContainer,
-            start: 'top top',
-            end: '+=100vh',
-            pin: pinTarget,
-            pinSpacing: true,
-            scrub: 1.2,
-            anticipatePin: 1,
-            invalidateOnRefresh: true,
-            markers: DEBUG ? { startColor: 'green', endColor: 'red', fontSize: '12px' } : false,
-          },
-        });
+        const tl = gsap.timeline({ delay: 0.2 });
 
-        // --- SCROLL 1 (0% to 100% of timeline - from 0px to 100vh scrolled) ---
-        // Reveal centerpiece orb (0% to 25% of timeline duration)
-        tl.to('.hero-centerpiece-column', { opacity: 1, scale: 1, duration: 1.5 }, 0);
+        // Reveal centerpiece orb
+        tl.to('.hero-centerpiece-column', { opacity: 1, scale: 1, duration: 1.2, ease: 'power3.out' }, 0);
 
-        // Shift text layout in X-space (10% to 35% of timeline duration)
-        tl.to('.hero-content-inner', { xPercent: -5, duration: 1.5 }, 0.5);
+        // Shift text layout slightly to make room
+        tl.to('.hero-content-inner', { xPercent: -2, duration: 1.2, ease: 'power2.out' }, 0.2);
 
-        // 3D Orbit Rotations (20% to 50% of timeline duration)
-        tl.to('.orb-ring-horizontal', { rotationZ: 180, duration: 1.8 }, 1.2)
-          .to('.orb-ring-vertical', { rotationZ: -180, duration: 1.8 }, 1.2)
-          .to('.orb-svg-ring', { rotation: 180, duration: 1.8 }, 1.2);
+        // 3D Orbit Rotations
+        tl.to('.orb-ring-horizontal', { rotationZ: 180, duration: 1.5, ease: 'power2.out' }, 0.4)
+          .to('.orb-ring-vertical', { rotationZ: -180, duration: 1.5, ease: 'power2.out' }, 0.4)
+          .to('.orb-svg-ring', { rotation: 180, duration: 1.5, ease: 'power2.out' }, 0.4);
 
-        // Fade & slide in metrics grid (50% to 100% of timeline duration)
-        // By 100% (exactly 1 scroll), metrics cards are fully visible and readable
-        tl.to('.hero-text-primary', { opacity: 0.25, scale: 0.95, duration: 1.5 }, 2.0).to(
+        // Fade & slide in metrics grid smoothly
+        tl.to(
           '.metrics-card',
           {
             opacity: 1,
@@ -87,10 +73,10 @@ export function CinematicHero() {
             scale: 1,
             rotation: 0,
             duration: 0.8,
-            stagger: 0.15,
-            ease: 'back.out(1.7)',
+            stagger: 0.1,
+            ease: 'back.out(1.5)',
           },
-          2.0,
+          0.6,
         );
       });
 
@@ -102,24 +88,10 @@ export function CinematicHero() {
         gsap.set('.metrics-card', { opacity: 0, y: 30, scale: 0.85 });
         gsap.set('.orb-svg-ring', { rotation: 0 });
 
-        const tl = gsap.timeline({
-          scrollTrigger: {
-            trigger: scrollContainer,
-            start: 'top top',
-            end: '+=100vh',
-            pin: pinTarget,
-            pinSpacing: true,
-            scrub: 1.0,
-            anticipatePin: 1,
-            invalidateOnRefresh: true,
-            markers: DEBUG ? { startColor: 'orange', endColor: 'purple' } : false,
-          },
-        });
+        const tl = gsap.timeline({ delay: 0.2 });
 
-        // Scroll 1 (0% to 100%):
-        tl.to('.hero-centerpiece-column', { opacity: 0.25, scale: 0.9, duration: 1.5 }, 0);
-        tl.to('.hero-text-primary', { opacity: 0.3, duration: 1.5 }, 0.75)
-          .to('.orb-svg-ring', { rotation: 90, duration: 1.5 }, 0.75)
+        tl.to('.hero-centerpiece-column', { opacity: 0.25, scale: 0.9, duration: 1.2, ease: 'power2.out' }, 0);
+        tl.to('.orb-svg-ring', { rotation: 90, duration: 1.5, ease: 'power2.out' }, 0.2)
           .to(
             '.metrics-card',
             {
@@ -130,7 +102,7 @@ export function CinematicHero() {
               stagger: 0.1,
               ease: 'back.out(1.5)',
             },
-            1.5,
+            0.4,
           );
       });
     },
@@ -174,9 +146,8 @@ export function CinematicHero() {
               </Text>
             </div>
               <Text color="muted" size="lg" className="max-w-[40rem] font-sans leading-relaxed">
-                I build full stack web applications — from clean React interfaces to Node.js backends
-                and real-time systems. I write production-ready code and solve algorithmic problems
-                at a competitive level.
+                I build full stack web apps with React and Node.js — focused on real-time features,
+                clean UI, and systems that scale. Currently open to full-time roles.
               </Text>
             <div className="flex flex-wrap gap-4 pt-4">
               <Button
@@ -189,7 +160,7 @@ export function CinematicHero() {
               </Button>
               <Button
                 variant="secondary"
-                href="https://drive.google.com/file/d/1A1TOb4Pt56tx6bKtyMm64hagbvn9sAIq/view?usp=drive_link"
+                href="/resume.pdf"
                 size="lg"
                 leftIcon={<Download className="h-4 w-4" />}
               >
@@ -246,13 +217,12 @@ export function CinematicHero() {
   return (
     <div
       ref={containerRef}
-      className="cinematic-hero-scroll-container bg-background relative w-full"
-      style={{ height: '100vh' }}
+      className="cinematic-hero-scroll-container bg-background relative w-full pt-16 pb-12 lg:pt-28 lg:pb-24"
     >
-      {/* Pinned viewport target */}
+      {/* Container wrapper */}
       <div
         ref={pinTargetRef}
-        className="cinematic-hero-pin-target relative flex h-screen w-full items-center justify-center overflow-hidden"
+        className="cinematic-hero-pin-target relative flex w-full items-center justify-center overflow-hidden"
       >
         {/* Background Grids */}
         <div className="absolute inset-0 z-0">
@@ -301,9 +271,8 @@ export function CinematicHero() {
 
                   {/* Headline */}
                   <p className="text-muted-foreground max-w-[38rem] font-sans text-sm leading-relaxed sm:text-base lg:text-lg">
-                    I build full stack web applications — from clean React interfaces to Node.js
-                    backends and real-time systems. I write production-ready code and solve
-                    algorithmic problems at a competitive level.
+                    I build full stack web apps with React and Node.js — focused on real-time
+                    features, clean UI, and systems that scale. Currently open to full-time roles.
                   </p>
 
                   {/* Action buttons */}
@@ -321,7 +290,7 @@ export function CinematicHero() {
                     <Magnetic range={40} strength={0.25}>
                       <Button
                         variant="secondary"
-                        href="https://drive.google.com/file/d/1A1TOb4Pt56tx6bKtyMm64hagbvn9sAIq/view?usp=drive_link"
+                        href="/resume.pdf"
                         size="md"
                         leftIcon={<Download className="h-4 w-4" />}
                       >
